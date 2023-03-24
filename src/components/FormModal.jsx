@@ -36,7 +36,7 @@ const FormModal = ({ open, setOpen, data, setData, onSave }) => {
 										className='text-lg leading-6 font-medium text-gray-900'
 										id='modal-title'
 									>
-										{data?.id ? 'Edit Post' : 'Add Post'}
+										{data?.id ? 'Update Post' : 'Add Post'}
 									</h3>
 									<div className='mt-2'>
 										<div className='space-y-8 divide-y divide-gray-200 sm:space-y-5'>
@@ -75,7 +75,7 @@ const FormModal = ({ open, setOpen, data, setData, onSave }) => {
 								className='w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:ml-3 sm:w-auto sm:text-sm'
 								onClick={() => onSave()}
 							>
-								Save
+								{data?.id ? 'Update' : 'Add'}
 							</button>
 							<button
 								type='button'
